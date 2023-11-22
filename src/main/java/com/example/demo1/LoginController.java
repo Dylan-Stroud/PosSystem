@@ -40,16 +40,7 @@ public class LoginController {
         }
 
     }
-    public void switchToLoginPage(ActionEvent event) throws IOException {
 
-        root =  FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root, 600 , 600);
-        String css = this.getClass().getResource("Loginpage.css").toExternalForm();
-        scene.getStylesheets().add(css);
-        stage.setScene(scene);
-        stage.show();
-    }
 
     public static boolean verifyLogin(String username, String password, String filepath){
 

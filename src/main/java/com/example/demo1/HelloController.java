@@ -12,19 +12,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
+
     private Stage stage;
     private Scene scene;
     private Parent root;
-    public void switchToMainPage(ActionEvent event) throws IOException {
 
-        root =  FXMLLoader.load(getClass().getResource("hello-view.fxml"));
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root, 600 , 600);
-        stage.setScene(scene);
-        stage.show();
-    }
     public void switchToLoginPage(ActionEvent event) throws IOException {
 
         root =  FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
